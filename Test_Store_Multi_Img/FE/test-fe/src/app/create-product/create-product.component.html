@@ -1,0 +1,12 @@
+<form [formGroup]="formCreate" (ngSubmit)="createProduct()">
+  <input type="text" class="form-control" formControlName="name">
+
+    <div>
+      <img *ngFor="let url of urls" [src]="url" class="rounded mb-3" width="180">
+    </div>
+    <input type="file" multiple (change)="preview($event)">
+
+  <button type="submit" class="btn btn-primary">Create</button>
+</form>
+
+<a [routerLink]="['list']">List</a>

@@ -1,0 +1,15 @@
+<div class="container">
+  <table class="table">
+    <th class="thead-dark">
+      <tr>Name</tr>
+      <tr col="2">Image</tr>
+    </th>
+
+    <tr *ngFor="let product of products">
+      <td>{{product.name}}</td>
+      <td *ngFor="let img of product.imageProducts">
+        <img [src]="img.link" style="width: 180px" alt="">
+      </td>
+    </tr>
+  </table>
+</div>
